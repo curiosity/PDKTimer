@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PDKTimer"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "A simple swift GCD based Timer"
 
   s.description  = <<-DESC

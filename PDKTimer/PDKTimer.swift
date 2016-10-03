@@ -157,13 +157,13 @@ final public class PDKTimer {
     }
     
     private func resetTimer(){
-        let intervalInNanoseconds = DispatchTimeInterval.nanoseconds(Int(timeInterval * Double(NSEC_PER_SEC)))
-        let toleranceInNanoseconds = DispatchTimeInterval.nanoseconds(Int(tolerance * Double(NSEC_PER_SEC)))
+        let intervalInMilliseconds = DispatchTimeInterval.milliseconds(Int(timeInterval * 1000))
+        let toleranceInMilliseconds = DispatchTimeInterval.milliseconds(Int(tolerance * 1000))
         
         timer.scheduleRepeating(
-            deadline: (DispatchTime.now() + intervalInNanoseconds),
-            interval: intervalInNanoseconds,
-            leeway: toleranceInNanoseconds)
+            deadline: (DispatchTime.now() + intervalInMilliseconds),
+            interval: intervalInMilliseconds,
+            leeway: toleranceInMilliseconds)
     }
 }
 
